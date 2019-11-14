@@ -22,8 +22,9 @@ mysql -u root -p
 * __listen tcp 0.0.0.0:80: bind: address already in use__
   1. sudo nginx -s stop
 
-* __cannot log in mysql__
+* __cannot log in mysql__  
   change user verification method to 5.0 version  
   1. docker exec -it 'db container name' /bin/bash
   2. mysql -u root -p
   3. ALTER USER 'user\_id' IDENTIFIED WITH mysql\_native\_password BY 'password';
+
