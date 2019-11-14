@@ -1,28 +1,28 @@
 # Web Server (php + mysql + phpmyadmin)
 
-* mysql
+## mysql  
     mysql -u root -p
-
+    <br>
     - add user
-	1. create user 'user\_name'@'localhost' identified by 'password';
-
+	1. create user 'user\_name'@'localhost' identified by 'password';  
+    <br>
     - grant privilages
 	1. grant all privileges on \*.\* to 'user\_name'@'localhost';
 	1. grant all privileges on db\_name.\* to 'user'@'localhost';
-
+    <br>
     - delete user
 	1. drop user 'user\_name'@'localhost';
-
-* errors
+    <br>
+## errors
     - listen tcp 0.0.0.0:3306: bind: address already in use
 	1. sudo netstat -nlpt |grep 3306
 	1. sudo service mysql stop (sudo service mysqld stop)
 	1. sudo service apache2 stop
-
+    <br>
     - listen tcp 0.0.0.0:80: bind: address already in use
 	1. sudo nginx -s stop
-
-    - cannot log in mysql
+    <br>
+    - cannot log in mysql  
 	change user verification method to 5.0 version
 	1. docker exec -it 'db container name' /bin/bash
 	1. mysql -u root -p
