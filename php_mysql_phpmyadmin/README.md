@@ -1,4 +1,4 @@
-#Web Server (php + mysql + phpmyadmin)
+# Web Server (php + mysql + phpmyadmin)
 
 * mysql
     mysql -u root -p
