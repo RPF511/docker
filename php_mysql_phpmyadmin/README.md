@@ -27,4 +27,7 @@ mysql -u root -p
   1. docker exec -it 'db container name' /bin/bash
   2. mysql -u root -p
   3. ALTER USER 'user\_id' IDENTIFIED WITH mysql\_native\_password BY 'password';
-
+* __file put or get : permission denied__
+  1. sudo chown -R www-data:www-data /var/www
+  2. find /var/www -type d -print0 | xargs -0 chmod 0755 \(folder\)
+  3. find /var/www -type f -print0 | xargs -0 chmod 0644 \(files\)
