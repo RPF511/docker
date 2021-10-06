@@ -7,8 +7,8 @@ services:
         environment:
             MYSQL_DATABASE: mysql
             MYSQL_USER: rpf511
-            MYSQL_PASSWORD: 511
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: rootpassword
         volumes:
             - "./data:/var/lib/mysql:rw"
     phpmyadmin:
@@ -20,8 +20,8 @@ services:
         environment:
             MYSQL_HOST: mysql
             MYSQL_USER: rpf511
-            MYSQL_PASSWORD: 511
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: rootpassword
     web:
         build:
           context: .
